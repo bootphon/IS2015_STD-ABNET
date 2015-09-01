@@ -95,19 +95,19 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 \subsection{Spoken term discovery}
 
 \begin{itemize}
-\item System used as baseline for track 2\cite{versteeghetal2015}
+\item System used as baseline for track 2\cite{versteeghetal2015}.
 \item Finding patterns in an approximation of the similarity matrix.
 \item Computes an approximation of the similarity matrix (cosine similarity).
 \item Searches for diagonal patterns in that matrix.
 \item Those matching patterns are then filtered and clustered.
 \end{itemize}
 
-This is only a succinct description of the system and there is a lot more to it.
+This is only a succinct description of the system and there is a lot more to it. See \cite{jansenvandurme2011} for more.
 
 \begin{figure}[ht!]
   \begin{center}
     \includegraphics[width=0.85\columnwidth]{similarity_matrix}
-    \caption{\label{fig:system}Similarity matrix of the signal.}
+    \caption{\label{fig:system}Similarity matrix of the signal. Source: \cite{jansenvandurme2011}}
   \end{center}
 \end{figure}
 
@@ -187,13 +187,15 @@ Adding speaker information.
 
 \section{Results}
 
-The speech representation is evaluated with the ABX paradigm\cite{versteeghetal2015}.
-
-The overall system raised a substancial improvement over baseline.
+\begin{itemize}
+\item The speech representation is evaluated with the ABX paradigm\cite{versteeghetal2015}.
+\item Two task: discriminate phones within speakers, and discriminate phones across speakers.
+\item The overall system raised a substancial improvement over baseline.
+\end{itemize}
 
 %
 \begin{table}[htb]
-\caption{ Within and across speaker Minimal Pair ABX error rates for the ZeroSpeech baseline (MFCC) and topline (supervised HMM-GMM posteriorgrams), and for our systems.}
+\caption{ Within and across speaker Minimal Pair ABX error rates.}
 \label{tab:track1}
 \vspace{1cm}
 \centerline{
