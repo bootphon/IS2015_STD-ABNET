@@ -81,12 +81,15 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 
 \section{System}
 
+\vspace{0.5cm}
 \begin{figure}[ht!]
   \begin{center}
     \includegraphics[width=\columnwidth]{system}
     \caption{\label{fig:system}Overview of the components of our system.}
   \end{center}
 \end{figure}
+
+A word tutor was designed to link the STD system and the \abnet{}. The 3 parts are described below.
 
 %-----------------------------------------
 %       SPOKEN TERM DISCOVERY
@@ -106,7 +109,7 @@ See \cite{jansenvandurme2011} for more.
 
 \begin{figure}[ht!]
   \begin{center}
-    \includegraphics[width=0.3\columnwidth]{similarity_matrix}
+    \includegraphics[width=0.4\columnwidth]{similarity_matrix}
     \caption{\label{fig:system}Similarity matrix of the signal. Source: \cite{jansenvandurme2011}}
   \end{center}
 \end{figure}
@@ -189,8 +192,9 @@ The results of the filtering are described in the table below. The NED is the no
 \hline
 English & 6512 & 4305 & 3149 & 0.219 & 0.163 \\
 English with Mdelta & 4334 & 2630 & 2092 & 0.229 & 0.106 \\
+\hline
 Xitsonga & 3582 & 1818 & 1782 & 0.120 & 0.162 \\
-Xitsonga with Mdelta & 2286 & 1158 & 1138 &  0.105 & 0.106 \\
+Xitsonga with Mdelta & 2286 & 1158 & 1138 &  \textbf{0.105} & 0.106 \\
 \hline
 \end{tabular}
 \end{table}
@@ -218,10 +222,11 @@ Xitsonga with Mdelta & 2286 & 1158 & 1138 &  0.105 & 0.106 \\
 \section{Results}
 
 \begin{itemize}
-\item The speech representation is evaluated with the ABX paradigm\cite{versteeghetal2015}.
+\item The speech representation is evaluated with the ABX paradigm (see \cite{versteeghetal2015}).
 \item Two task: discriminate phones within speakers, and discriminate phones across speakers.
 
 %
+\vspace{1cm}
 \begin{table}[htb]
 \caption{ Within and across speaker Minimal Pair ABX error rates.}
 \label{tab:track1}
@@ -229,11 +234,11 @@ Xitsonga with Mdelta & 2286 & 1158 & 1138 &  0.105 & 0.106 \\
 \centerline{
 \begin{tabular}{lcccc}
 \hline
-\vspace{1cm}        & \multicolumn{2}{c}{\underline{English}}  & \multicolumn{2}{c}{\underline{Xitsonga}}    \\
-                        & Within  & Across   & Within  & Across   \\
+  & \multicolumn{2}{c}{\underline{English}}  & \multicolumn{2}{c}{\underline{Xitsonga}}    \\
+  & Within  & Across   & Within  & Across   \\
 \hline
-Baseline (MFCC)          & \emph{15.6}      & \emph{28.1}      & \emph{19.1}      & \emph{33.8}      \\
-Topline (HMM-GMM)           & \emph{12.1}      & \emph{16.0}      & \emph{3.5}       & \emph{4.5}      \\
+  Baseline (MFCC)          & \emph{15.6}      & \emph{28.1}      & \emph{19.1}      & \emph{33.8}      \\
+  Topline (HMM-GMM)           & \emph{12.1}      & \emph{16.0}      & \emph{3.5}       & \emph{4.5}      \\
 \hline
 STD $\rightarrow$ \abnet{} & \textbf{12.0}      & \textbf{17.9}      & \textbf{11.7}      & \textbf{16.6}      \\
 STD / MDelta $\rightarrow$ \abnet{} & 12.4      & 18.1      & 12.6      & 18.6      \\
