@@ -113,16 +113,17 @@ See \cite{jansenvandurme2011} for more.
 
 \subsection{Word tutor}
 
-The word tutor selects the words that it will feed to the \abnet{}, making the link between the STD system and the \abnet{}.
-Pairs of ``different'' words are randomly selected amongst the discovered patterns. All pairs of words (same and different) are DTW aligned.
+\begin{itemsize}
+\item The word tutor selects the words that it will feed to the \abnet{}, making the link between the STD system and the \abnet{}.
+\item Pairs of ``different'' words are randomly selected amongst the discovered patterns. All pairs of words (same and different) are DTW aligned.
 
-We extract 40 dimensionnal log-energy Mel-scale filterbanks (10ms step and 25ms window size). 7 adjacent (following the ``aligned'' path) frames are stacked as input for the \abnet{}.
+\item We extract 40 dimensionnal log-energy Mel-scale filterbanks (10ms step and 25ms window size). 7 adjacent (following the ``aligned'' path for pairs of ``same'' words, no alignment for ``different'' words) frames are stacked as input for the \abnet{}.
 
 \subsection{ABnet}
 
 \begin{itemize}
 \item The \abnet{} is a siamese neural network architecture: the weights in the second branch are the duplicate of the weights in the first branch.
-\item Input: a pair of examples (A, B) and a label Y=(same|different)
+\item Input: a pair of examples (A, B) and a label Y=(same|different), here 7 stacked frames of 40 dimensionnal filterbanks.
 \item loss function = similarity if same, distance if different.
 
 \vspace{1cm}
