@@ -1,0 +1,215 @@
+%==============================================================================
+%== template for LATEX poster =================================================
+%==============================================================================
+%
+%--A0 beamer slide-------------------------------------------------------------
+\documentclass[final]{beamer}
+\usepackage[orientation=portrait,size=a0,
+            scale=1.25         % font scale factor
+           ]{beamerposter}
+          
+\usepackage{booktabs}
+\geometry{
+  hmargin=2.5cm, % little modification of margins
+}
+
+%
+\usepackage[utf8]{inputenc}
+
+\linespread{1.05} %%% TODO CHANGE (was 1.15)
+%
+%==The poster style============================================================
+\usetheme{sharelatex}
+
+%==Title, date and authors of the poster=======================================
+\title
+[ICLR Workshop (2015, San Diego, USA)] % Conference
+{ % Poster title
+Weakly supervised multi-embeddings\\
+learning of acoustic models
+}
+
+\author{ % Authors
+Gabriel Synnaeve\inst{*\dagger}, Emmanuel Dupoux\inst{*}
+}
+\institute
+[ENS] % General University
+{
+\inst{*} LSCP, \'{E}cole Normale Sup\'{e}rieure / EHESS / CNRS, Paris, France\\%[0.3ex]
+\inst{\dagger} now at Facebook AI Research\\[0.5ex]
+\inst{} \begin{small}\texttt{gabriel.synnaeve@gmail.com, emmanuel.dupoux@gmail.com}\end{small}
+}
+%\date{\today}
+
+
+
+\begin{document}
+\begin{frame}[t]
+%==============================================================================
+\begin{multicols}{3} % try 2
+%==============================================================================
+%==The poster content==========================================================
+%==============================================================================
+
+\section{Introduction}
+
+\begin{itemize}
+\item Recent interest in unsupervised or weakly supervised discovery of linguistic
+structure \cite{zerospeech}.
+\item Plausible models of language acquisition in the human infant \cite{vallabha2007}.
+\item Can be put to use for low resource languages \cite{park2008}.
+\item Intuition: Infants recognize words \cite{bergelson2012} and discriminate between speakers \cite{johnson2011} \emph{before} they have constructed adult-like phoneme representations.
+\item Past work: Neural Network (DNN) architecture can learn
+phone embeddings provided same word/different word side information \cite{synnaeve2014}\\
+$\Rightarrow$ We extend this work using multi-task (word and speaker
+identity) side information to learning simultaneously a phone and a
+speaker embedding.
+\end{itemize}
+
+\section{Model}
+
+\begin{itemize}
+\item ``Siamese network'' \cite{bromley1993}: duplicated feedforward NN taking two inputs in parallel.
+\item Input: 11 stacked frames of 40 coefficients log-compressed Mel-filterbanks.
+\item 3 hidden layers of 500 units with sigmoid activations.
+\item 2 output embeddings (100 dimensions each, one for ``word'' similarity, one for ``speaker'' similarity).
+\item Trained to perform  same/different discrimination. More formally:\\
+Inputs: $x_A\ \mathrm{and}\ x_B \in \mathbb{R}^{11\times40}$\\
+Outputs: $y_{A,W},\ y_{A,S},\ y_{B,W}\ \mathrm{and}\ y_{B,S} \in \mathbb{R}^{100}$
+\item The loss function is the sum of the \textsc{coscos$^2$} losses in each of the embeddings (see \cite{synnaeve2014} for other loss functions):
+\begin{eqnarray*}
+\ell(A,B) = \ell_{W}(A,B) + \ell_{S}(A,B)
+\end{eqnarray*}
+with
+\begin{eqnarray*}
+\ell_{S}(A,B) & = & \lambda_S\times(1-\cos(y_{A,S}, y_{B,S})) \\
+ & & + (1-\lambda_S)\times(\cos^2(y_{A,S}, y_{B,S}))
+\end{eqnarray*}
+
+with $\lambda_S \in \{0,1\}$ (for different or same speaker). Similarily for the word loss ($\ell_{W}(A,B)$).
+
+\end{itemize}
+   
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.46\columnwidth]{ABnet2Output}
+\includegraphics[width=0.54\columnwidth]{training_validation_costs_smoothed_legend}
+\caption{Left: Architecture of our multi-embeddings learning Siamese network. We used NF=11, NH=500, and NE=100. Right: Evolution of cosine similarities for pairs of same/different words/speakers during training for the train set (saturated) and validation set (pastel).}
+\end{center}
+\label{fig:modeltrain}
+\end{figure}
+
+\section{Experiments}
+\begin{itemize}
+\item About 1/3rd (12 speakers) of the Buckeye corpus\cite{buckeye}, 
+\item Dynamic time warping (DTW) alignment of pairs of same words in the features space (filterbanks) \cite{synnaeve2014}. \\
+% what is long?
+$\Rightarrow$ 76407 pairs of long ``same'' word (1057 types in total), said 1/4th of the time by the same speakers (we subsampled ``same word and different speakers'' pairs). 
+\item Negative sampling (tokens coming from different words) with a ratio of pairs of same/different words of 1:1. This yields about 5M frames for pairs of same words and 4.3M frames for sampled pairs of different words.
+\item Trained with Adadelta \cite{zeiler2012}, $\rho=0.95$ and $\epsilon=10^{-6}$, early stopping on a held-out development set (10\%).
+\item In the single-loss setup, we only use one of the losses (word or speaker), this means that the weights of only one of the two embeddings is updated, the other remaining in their initial state (random projection from the last hidden layer).
+\item We also trained a fully supervised DNN using dropout that has 11 stacked filterbank frames as input, 4 hidden layers of 2400 units, and 46 phones as outputs of the logistic regression (with a 37.9\% classification accuracy on the same test set).
+\end{itemize}
+
+\section{Results}
+\begin{itemize}
+\item Unsupervised systems do not necessarily discover phoneme-like units. Therefore, evaluating them with a phone error rate may not be appropriate.
+\item Schatz et al. \cite{schatz2013} uses instead the ABX discrimination task : computing two pairwise distances, between the token pair X and A, and between X and B and deciding which of them is larger. We setup two tasks, on which we will test our two embeddings:  
+\begin{itemize}
+\item \textit{phone.talker} is a phoneme discrimination task across speakers. For instance, A=/a/-/p/-/i/, B=/a/-/t/-/i/, both being said by the same speaker, and X is phonetically identical to A or B, but is uttered by a different speaker.
+%\item \textit{talker.none} is a task on the talker, by fixed contexts and phones (for each triplet).
+\item \textit{talker.phone} is a speaker discrimination task, across phonemes. For instance, both A and B share the same triphone (e.g., /a/-/p/-/i/) but are said by different speakers; X is uttered by either the speaker of A or the speaker of B, but has different phonemes (e.g., /a/-/t/-/i/).
+\end{itemize}
+%The two tasks are mirror image of one another regarding the discrimination of the phonemes or of the talkers. To run this task, we select the set of all eligible ABX triplets of triphones in the dataset, and compute the aggregate ABX score by averaging across context, phoneme and speaker pairs. 
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.89\columnwidth]{ICLR_ABX}
+\caption{ABX scores for speech features (11 frames of stacked filterbanks), for three Siamese networks: one trained with a same/different word loss function (``word\_only''), one with a multi-task loss (``both''), and one same/different speakers loss functions (``spkr\_only''). The three networks have the same topology and the ABX tasks (phone or speaker) are run, respectively, on the phone-based and the speaker-based embeddings. A control shows a supervised DNN trained on phones.}
+\end{center}
+\label{fig:ABXscores}
+\end{figure}
+
+\begin{itemize}
+\item Speaker discrimination seems easier to optimize than phoneme discrimination. This is probably due to the small number of speaker classes (N=12) compared to the number of phoneme classes (N=48).
+\item Learning to do two tasks at once using the same network does not incur a decrease in performance.
+\item Interestingly the single-task networks behave asymmetrically with respect to the untrained task: if you are trained to ignore phoneme identity, phoneme encoding should be progressively removed from the hidden layers of the network. But vice-versa the performance on speaker discrimination is \emph{better} for the phoneme-loss network compared to the filterbank base performance. This means that in order to determine speaker identity, it is actually useful for the network to code some information about the phonemes.
+\item Specialization on the task is even more extreme for the fully supervised DNN trained on phone labels: it gives us a higher bound on the \textit{phone accross talkers} task (81.9\% correct), and shows degraded \textit{talker accross phones} score (54.8\% correct) compared to the filterbank. 
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{specificity}
+\caption{Coding specificity of the input, hidden and embedding layers of the AB net, computed using the ratio of between- to within-category variance (F-test). Left: 11 stacked filterbanks coding of speakers (shades of blue) and phones (shades of red). The x-axis represent the 11 stacked frames, the y-axis represents the 40 filterbanks coefficients. Right: Cumulative barplots representing the number of units in the layers coding specifically for  speakers (blue), phones (red), both phones and speakers (purple), or none (black). A unit is deemed code-specific if the between/within variance ratio for that category is more than the network-wide median.}
+\end{center}
+\label{fig:specificity}
+\end{figure}
+
+\begin{itemize}
+\item The sparsity of the code increases with depth (ie., the number of units not coding anything).
+\item The phone embedding reveals a much less sparse coding than the speaker embedding and a predominance of doubly-used units.
+\end{itemize} 
+%\begin{itemize}
+%\item We took the variance of the activation value of the unit across all (between) the phone categories versus within each phone category. We did a similar computation for the speakers categories. If we split the ratio distribution using the median, this gives rise to a typology of 4 kinds of units according to whether they respond strongly or not to either phone or speaker information. 
+%\item First, phone-coding units are predominant in the first layers, and progressively, more and more speaker-coding units appear. Second, the number of doubly-coding units diminishes. Third, the sparsity of the code increases. 
+%\item Inspection of the task-specific embeddings is interesting, as it reveals an almost pure (and very sparse) coding of speaker identity in the speaker embedding. This is consistent with the high performance of speaker discrimination in this layer. In contrast, inspection of the phone embedding reveals a much less sparse coding and a predominance of doubly-used units. This is consistent with the rather low performance of phoneme discrimination in this layer, and suggests that further layers or more (speaker variability in) training examples would be necessary to ``purge''  this layer from speaker-specific effects. 
+%\item Finally, inspection of the filterbanks (here coded in shade of red and blue) shows that most of the lower frequency filterbanks are sensitive to phone information (relatively localized in time to the center frames, as we compute it on phonetic annotation), whereas the higher frequency filterbanks are sensitive to speaker information (relatively \textit{not} localized in time). 
+%\end{itemize}
+
+\section{Conclusion}
+\begin{itemize}
+\item A single Siamese network can perform both phoneme \textit{and} speaker discrimination,
+\item using only a moderate amount of side information (same/different word or speaker for $\approx$1000 word types and 12 speakers).
+\end{itemize}  
+Further work:
+\begin{itemize}
+\item Study the effect of the amount of information, 
+\item whether the obtained speaker embeddings could replace or complement \textit{i-vectors}. 
+\end{itemize}  
+
+\subsection{References}
+
+\begin{thebibliography}{99}
+\linespread{0.5}
+
+\begin{scriptsize}
+
+\bibitem{synnaeve2014} Synnaeve G. et al., Phonetics embedding learning with side information. \textit{IEEE SLT} 2014.
+
+\bibitem{schatz2013} Schatz T. et al, Evaluating speech features with the Minimal-Pair ABX task: Analysis of the classical MFC/PLP pipeline. \textit{INTERSPEECH} 2013.
+
+\bibitem{park2008} Park A. et al. Unsupervised Pattern Discovery in Speech. \textit{{IEEE} Transactions on Audio, Speech, and Language Processing} 2008.
+
+\bibitem{vallabha2007} Vallabha G.K. et al., Unsupervised learning of vowel categories from infant-directed speech. \textit{PNAS} 2007.
+
+\bibitem{bergelson2012} Bergelson E. and Swingley D., At 6--9 months, human infants know the meanings of many common nouns. \textit{PNAS} 2012.
+
+\bibitem{johnson2011} Johnson E.K. et al., Infant ability to tell voices apart rests on language experience. \textit{Developmental Science} 2011.
+	
+\bibitem{bromley1993} Bromley J. et al., Signature verification using a “Siamese” time delay neural network. \textit{Int. Journ. of Pattern Recog. and Artific. Intell.} 1993.
+
+\bibitem{hadsell2006} Hadsell R. et al., Dimensionality reduction by learning an invariant mapping. \textit{CVPR} 2006
+
+\bibitem{zeiler2012} Zeiler M.D., ADADELTA: An adaptive learning rate method, \textit{arXiv} 2012
+
+\bibitem{jansen2010} Jansen A. et al., Towards spoken term discovery at scale with zero resources. \textit{INTERSPEECH} 2010.
+
+\bibitem{github} Github project: \url{https://github.com/bootphon/abnet}
+
+\bibitem{buckeye} Buckeye corpus: \url{http://buckeyecorpus.osu.edu}
+
+\bibitem{zerospeech} ZeroSpeech challenge: \url{www.zerospeech.com}
+
+
+\end{scriptsize}
+
+\end{thebibliography}
+%--End of references-----------------------------------------------------------
+
+\end{multicols}
+
+%==============================================================================
+\end{frame}
+\end{document}
+
