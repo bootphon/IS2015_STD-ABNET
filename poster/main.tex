@@ -59,8 +59,8 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 
 \begin{itemize}
 \item This system is the combination of two architectures: a spoken term discovery\cite{jansenvandurme2011} (STD) and a siamese neural network\cite{synnaevedupoux2014} (\abnet{}).
-\item The STD system find matching patterns in the acoustic signal.
-\item The \abnet{} is train to minimize the distance between those matching patterns, and maximize the distance between non matching patterns.
+\item The STD system finds matching patterns in the acoustic signal.
+\item The \abnet{} is trained to minimize the distance between those matching patterns, and maximize the distance between non matching patterns.
 \end{itemize}
 
 
@@ -71,7 +71,7 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 \section{Motivation}
 
 \begin{itemize}
-\item The high level idea: that two randomly selected words are more distant in the acoustic space than two randomly selected phonemes. It is easier to discriminate words than phonemes.
+\item The high level idea: two randomly selected words will be more distant in acoustic space than two randomly selected phonemes. It is easier to discriminate words than phonemes.
 \item Our approach: extract word level information to learn phonemes.
 \end{itemize}
 
@@ -95,7 +95,7 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 \subsection{Spoken term discovery}
 
 \begin{itemize}
-\item System used as baseline for track 2\cite{versteeghetal2015}.
+\item System used as baseline for track 2 \cite{versteeghetal2015}.
 \item Finding patterns in an approximation of the similarity matrix.
 \item Computes an approximation of the similarity matrix (cosine similarity).
 \item Searches for diagonal patterns in that matrix.
@@ -116,7 +116,7 @@ See \cite{jansenvandurme2011} for more.
 The word tutor selects the words that it will feed to the \abnet{}, making the link between the STD system and the \abnet{}.
 Pairs of ``different'' words are randomly selected amongst the discovered patterns. All pairs of words (same and different) are DTW aligned.
 
-We extract 40 dimensionnal log-energy Mel-scale filterbanks (10ms step and 25ms window size). 7 adjacent (following the ``aligned'' path) frames are stacked as input for the \abnet{}.
+We extract 40 dimensional log-energy Mel-scale filterbanks (10ms step and 25ms window size). 7 adjacent (following the ``aligned'' path) frames are stacked as input for the \abnet{}.
 
 \subsection{ABnet}
 
