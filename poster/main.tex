@@ -102,7 +102,7 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 \item Those matching patterns are then filtered and clustered.
 \end{itemize}
 
-This is only a succinct description of the system and there is a lot more to it. See \cite{jansenvandurme2011} for more.
+See \cite{jansenvandurme2011} for more.
 
 \begin{figure}[ht!]
   \begin{center}
@@ -125,6 +125,7 @@ We extract 40 dimensionnal log-energy Mel-scale filterbanks (10ms step and 25ms 
 \item Input: a pair of examples (A, B) and a label Y=(same|different)
 \item loss function = similarity if same, distance if different.
 
+\vspace{1cm}
 \begin{figure}[ht!]
   \begin{center}
     \includegraphics[width=0.85\columnwidth]{abnet}
@@ -152,14 +153,7 @@ where $$\cos(x, y) = \frac{\tup{x, y}}{\norm{x}\norm{y}}$$
 %	Extensions
 %-----------------------------------------
 
-\section{Extensions}
-
-We investigate the use of temporal information, and speaker information.
-
-\subsection{Mdelta}
-
-Adding temporal information.
-
+\section{Extension: M-delta filtering}
 
 \begin{figure}[ht!]
   \begin{center}
@@ -168,53 +162,15 @@ Adding temporal information.
   \end{center}
 \end{figure}
 
-\subsection{Speaker embedding}
-
-Adding speaker information.
-
-\begin{figure}[ht!]
-  \begin{center}
-    \includegraphics[width=\columnwidth]{system_spk}
-    \caption{\label{fig:system}Overview of the components of our system.}
-  \end{center}
-\end{figure}
-
-
-%----------------------------------------------------------------------------------------
-%	RESULTS 
-%----------------------------------------------------------------------------------------
-
-\section{Results}
-
 \begin{itemize}
-\item The speech representation is evaluated with the ABX paradigm\cite{versteeghetal2015}.
-\item Two task: discriminate phones within speakers, and discriminate phones across speakers.
-\item The overall system raised a substancial improvement over baseline.
+\item Two close frames (more likely to belong to the same phoneme) should differ less than two distant frames.
+\item the M-delta measure quantify how this property is verified.
+$$M_\Delta = \mu{}_{\mathrm{across}} - \mu{}_{\mathrm{within}}$$
+\item $\mu{}_{\mathrm{across}}$ (resp. $\mu{}_{\mathrm{within}}$) is an estimation of the average M-measure over frames belonging to different (resp. same) phonemes.
+\item The M-measure is average over all frames of the divergence between 2 frames (here we used the cosine distance as the divergence).
 \end{itemize}
 
-%
-\begin{table}[htb]
-\caption{ Within and across speaker Minimal Pair ABX error rates.}
-\label{tab:track1}
-\vspace{1cm}
-\centerline{
-\begin{tabular}{lcccc}
-\hline
-\vspace{1cm}        & \multicolumn{2}{c}{\underline{English}}  & \multicolumn{2}{c}{\underline{Xitsonga}}    \\
-                        & Within  & Across   & Within  & Across   \\
-\hline
-Baseline (MFCC)          & \emph{15.6}      & \emph{28.1}      & \emph{19.1}      & \emph{33.8}      \\
-Topline (HMM-GMM)           & \emph{12.1}      & \emph{16.0}      & \emph{3.5}       & \emph{4.5}      \\
-\hline
-STD $\rightarrow$ \abnet{} & \textbf{12.0}      & \textbf{17.9}      & \textbf{11.7}      & \textbf{16.6}      \\
-STD / MDF $\rightarrow$ \abnet{} & 12.4      & 18.1      & 12.6      & 18.6      \\
-STD + SpkID $\rightarrow$ \abnet{} & 12.2      & 18.0      & 16.5      & 21.3      \\
-\hline
-\end{tabular}
-}
-\end{table}
-%
-
+The results of the filtering are described in the table below. The NED is the normalized levenstein distance (calculated on the phone transcription). The coverage is a measure of the percentage of the corpus inventory discovered.
 
 \begin{table}[h]
 \caption{\label{tab:std-stats} Output of the spoken term discovery system. These fragments serve as input to the \abnet{}.}
@@ -231,6 +187,59 @@ Xitsonga with Mdelta & 2286 & 1158 & 1138 &  0.105 & 0.106 \\
 \hline
 \end{tabular}
 \end{table}
+
+\begin{itemize}
+\item The filtering did improve the NED, but only for the Xitsonga dataset.
+\end{itemize}
+
+% \subsection{Speaker embedding}
+
+% Adding speaker information.
+
+% \begin{figure}[ht!]
+%   \begin{center}
+%     \includegraphics[width=\columnwidth]{system_spk}
+%     \caption{\label{fig:system}Overview of the components of our system.}
+%   \end{center}
+% \end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS 
+%----------------------------------------------------------------------------------------
+
+\section{Results}
+
+\begin{itemize}
+\item The speech representation is evaluated with the ABX paradigm\cite{versteeghetal2015}.
+\item Two task: discriminate phones within speakers, and discriminate phones across speakers.
+
+%
+\begin{table}[htb]
+\caption{ Within and across speaker Minimal Pair ABX error rates.}
+\label{tab:track1}
+\vspace{1cm}
+\centerline{
+\begin{tabular}{lcccc}
+\hline
+\vspace{1cm}        & \multicolumn{2}{c}{\underline{English}}  & \multicolumn{2}{c}{\underline{Xitsonga}}    \\
+                        & Within  & Across   & Within  & Across   \\
+\hline
+Baseline (MFCC)          & \emph{15.6}      & \emph{28.1}      & \emph{19.1}      & \emph{33.8}      \\
+Topline (HMM-GMM)           & \emph{12.1}      & \emph{16.0}      & \emph{3.5}       & \emph{4.5}      \\
+\hline
+STD $\rightarrow$ \abnet{} & \textbf{12.0}      & \textbf{17.9}      & \textbf{11.7}      & \textbf{16.6}      \\
+STD / MDelta $\rightarrow$ \abnet{} & 12.4      & 18.1      & 12.6      & 18.6      \\
+% STD + SpkID $\rightarrow$ \abnet{} & 12.2      & 18.0      & 16.5      & 21.3      \\
+\hline
+\end{tabular}
+}
+\end{table}
+%
+\item The overall system raised a substancial improvement over baseline.
+\item Adding M-delta filtering did not improve the results.
+\end{itemize}
+
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSIONS
