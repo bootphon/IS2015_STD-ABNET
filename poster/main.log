@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.28)  1 SEP 2015 18:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.28)  3 SEP 2015 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -733,7 +733,7 @@ beamerposter: finished orientation check.
 beamerposter: checking size input, please wait.
 beamerposter: the input a0\ 1\ was correct, we proceed.
 beamerposter: finished size input check.
-beamerposter: myfontscale=1.25
+beamerposter: myfontscale=1.4
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
 
@@ -817,10 +817,18 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count169
 \@thisrulewidth=\dimen201
 )
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen202
+\WF@size=\dimen203
+\c@WF@wrappedlines=\count170
+\WF@box=\box53
+\WF@everypar=\toks45
+Package: wrapfig 2003/01/31  v 3.6
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
@@ -1045,15 +1053,15 @@ Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box53
+\pgfnodeparttextbox=\box54
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen202
-\pgf@nodesepend=\dimen203
+\pgf@nodesepstart=\dimen204
+\pgf@nodesepend=\dimen205
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1067,10 +1075,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen204
-\pgffor@skip=\dimen205
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen206
+\pgffor@skip=\dimen207
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
@@ -1078,31 +1086,31 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count170
-\pgfplotmarksize=\dimen206
+\pgf@plot@mark@count=\count171
+\pgfplotmarksize=\dimen208
 )
-\tikz@lastx=\dimen207
-\tikz@lasty=\dimen208
-\tikz@lastxsaved=\dimen209
-\tikz@lastysaved=\dimen210
-\tikzleveldistance=\dimen211
-\tikzsiblingdistance=\dimen212
-\tikz@figbox=\box54
-\tikz@figbox@bg=\box55
-\tikz@tempbox=\box56
-\tikz@tempbox@bg=\box57
-\tikztreelevel=\count171
-\tikznumberofchildren=\count172
-\tikznumberofcurrentchild=\count173
-\tikz@fig@count=\count174
+\tikz@lastx=\dimen209
+\tikz@lasty=\dimen210
+\tikz@lastxsaved=\dimen211
+\tikz@lastysaved=\dimen212
+\tikzleveldistance=\dimen213
+\tikzsiblingdistance=\dimen214
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count172
+\tikznumberofchildren=\count173
+\tikznumberofcurrentchild=\count174
+\tikz@fig@count=\count175
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count175
-\pgfmatrixcurrentcolumn=\count176
-\pgf@matrix@numberofcolumns=\count177
+\pgfmatrixcurrentrow=\count176
+\pgfmatrixcurrentcolumn=\count177
+\pgf@matrix@numberofcolumns=\count178
 )
-\tikz@expandcount=\count178
+\tikz@expandcount=\count179
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1115,7 +1123,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen213
+\arrowsize=\dimen215
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -1123,24 +1131,24 @@ zlibrarydecorations.pathmorphing.code.tex
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen214
-\pgfdecoratedremainingdistance=\dimen215
-\pgfdecoratedinputsegmentcompleteddistance=\dimen216
-\pgfdecoratedinputsegmentremainingdistance=\dimen217
-\pgf@decorate@distancetomove=\dimen218
-\pgf@decorate@repeatstate=\count179
-\pgfdecorationsegmentamplitude=\dimen219
-\pgfdecorationsegmentlength=\dimen220
+\pgfdecoratedcompleteddistance=\dimen216
+\pgfdecoratedremainingdistance=\dimen217
+\pgfdecoratedinputsegmentcompleteddistance=\dimen218
+\pgfdecoratedinputsegmentremainingdistance=\dimen219
+\pgf@decorate@distancetomove=\dimen220
+\pgf@decorate@repeatstate=\count180
+\pgfdecorationsegmentamplitude=\dimen221
+\pgfdecorationsegmentlength=\dimen222
 )
-\tikz@lib@dec@box=\box58
+\tikz@lib@dec@box=\box59
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathmorphing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.3)
-\pgf@layerbox@background=\box59
-\pgf@layerboxsaved@background=\box60
+\pgf@layerbox@background=\box60
+\pgf@layerboxsaved@background=\box61
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarycalc.code.tex
@@ -1475,28 +1483,27 @@ LaTeX Font Info:    Redeclaring math accent \dot on input line 252.
 LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
-\c@tracingmulticols=\count180
-\mult@box=\box61
-\multicol@leftmargin=\dimen221
-\c@unbalance=\count181
-\c@collectmore=\count182
-\doublecol@number=\count183
-\multicoltolerance=\count184
-\multicolpretolerance=\count185
-\full@width=\dimen222
-\page@free=\dimen223
-\premulticols=\dimen224
-\postmulticols=\dimen225
+\c@tracingmulticols=\count181
+\mult@box=\box62
+\multicol@leftmargin=\dimen223
+\c@unbalance=\count182
+\c@collectmore=\count183
+\doublecol@number=\count184
+\multicoltolerance=\count185
+\multicolpretolerance=\count186
+\full@width=\dimen224
+\page@free=\dimen225
+\premulticols=\dimen226
+\postmulticols=\dimen227
 \multicolsep=\skip71
 \multicolbaselineskip=\skip72
-\partial@page=\box62
-\last@line=\box63
-\maxbalancingoverflow=\dimen226
-\mult@rightbox=\box64
-\mult@grightbox=\box65
-\mult@gfirstbox=\box66
-\mult@firstbox=\box67
-\@tempa=\box68
+\partial@page=\box63
+\last@line=\box64
+\maxbalancingoverflow=\dimen228
+\mult@rightbox=\box65
+\mult@grightbox=\box66
+\mult@gfirstbox=\box67
+\mult@firstbox=\box68
 \@tempa=\box69
 \@tempa=\box70
 \@tempa=\box71
@@ -1513,14 +1520,15 @@ Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
 \@tempa=\box82
 \@tempa=\box83
 \@tempa=\box84
-\c@columnbadness=\count186
-\c@finalcolumnbadness=\count187
-\last@try=\dimen227
-\multicolovershoot=\dimen228
-\multicolundershoot=\dimen229
-\mult@nat@firstbox=\box85
-\colbreak@box=\box86
-\mc@col@check@num=\count188
+\@tempa=\box85
+\c@columnbadness=\count187
+\c@finalcolumnbadness=\count188
+\last@try=\dimen229
+\multicolovershoot=\dimen230
+\multicolundershoot=\dimen231
+\mult@nat@firstbox=\box86
+\colbreak@box=\box87
+\mc@col@check@num=\count189
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -1528,20 +1536,21 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen230
-\captionmargin@=\dimen231
-\captionwidth=\dimen232
-\caption@tempdima=\dimen233
+\captionmargin=\dimen232
+\captionmargin@=\dimen233
 Normal \dimen register pool exhausted, switching to extended pool.
-\caption@indent=\dimen256
-\caption@parindent=\dimen257
-\caption@hangindent=\dimen258
+\captionwidth=\dimen256
+\caption@tempdima=\dimen257
+\caption@indent=\dimen258
+\caption@parindent=\dimen259
+\caption@hangindent=\dimen260
 )
-\c@ContinuedFloat=\count189
+\c@ContinuedFloat=\count190
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
+Package caption Info: wrapfig package is loaded.
 )) (./main.aux
 
 LaTeX Warning: Label `fig:system' multiply defined.
@@ -1555,27 +1564,27 @@ LaTeX Warning: Label `fig:system' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 51.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 50.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 51.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1616,17 +1625,17 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count190
-\scratchdimen=\dimen259
-\scratchbox=\box87
-\nofMPsegments=\count191
-\nofMParguments=\count192
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count193
-\MPscratchDim=\dimen260
-\MPnumerator=\count194
-\makeMPintoPDFobject=\count195
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count191
+\scratchdimen=\dimen261
+\scratchbox=\box88
+\nofMPsegments=\count192
+\nofMParguments=\count193
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count194
+\MPscratchDim=\dimen262
+\MPnumerator=\count195
+\makeMPintoPDFobject=\count196
+\everyMPtoPDFconversion=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1643,8 +1652,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring OFF on input line 50.
+\AtBeginShipoutBox=\box89
+Package hyperref Info: Link coloring OFF on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1652,11 +1661,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count196
+\c@section@level=\count197
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1687,45 +1696,45 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 50.
+LaTeX Info: Redefining \includegraphics on input line 51.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 50.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
+LaTeX Info: Redefining \selectfont on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 51.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 50.
+(Font)              `operators' in the math version `normal' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 50.
+(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 51.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 50.
+(Font)              `operators' in the math version `bold' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 50.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 51.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
+(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 51.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 50.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 51.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 50.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 51.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 50.
+(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 51.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmvtt/m/n on input line 50.
+(Font)                  OT1/lmtt/m/n --> T1/lmvtt/m/n on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmvtt/m/n on input line 50.
+(Font)                  OT1/lmtt/m/n --> T1/lmvtt/m/n on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 50.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 51.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 50.
+(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 51.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Incompatible package detected (regarding \caption).
 (caption)             \caption = macro:->\ifx \@captype \@undefined \@latex@err
@@ -1741,29 +1750,29 @@ See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
 (./main.nav)
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 50.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 50.
+LaTeX Font Info:    Calculating math sizes for size <16.8> on input line 51.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 51.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 51.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 50.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 51.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15> on input line 50.
+(Font)              <16.8> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.49995> on input line 50.
+(Font)              <11.75995> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 50.
+(Font)              <8.4> on input line 51.
 Package epstopdf Info: Source file: <figures/CNRS_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
 (epstopdf)                    size: 569546 bytes
@@ -1772,7 +1781,7 @@ Package epstopdf Info: Source file: <figures/CNRS_LOGO.eps>
 (epstopdf)                    size: 17757 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/CNRS_LOGO-eps-conv
 erted-to.pdf figures/CNRS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 50.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/CNRS_LOGO-eps-converted-to.pdf, id=16, 342.27875pt x 342.27875pt>
@@ -1780,7 +1789,7 @@ File: figures/CNRS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/CNRS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/CNRS_LOGO-eps-converted-to.pdf used on input l
-ine 50.
+ine 51.
 (pdftex.def)             Requested size: 151.6403pt x 151.64243pt.
 Package epstopdf Info: Source file: <figures/EHESS_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -1790,7 +1799,7 @@ Package epstopdf Info: Source file: <figures/EHESS_LOGO.eps>
 (epstopdf)                    size: 9131 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/EHESS_LOGO-eps-con
 verted-to.pdf figures/EHESS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 50.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/EHESS_LOGO-eps-converted-to.pdf, id=17, 477.785pt x 473.77pt>
@@ -1798,23 +1807,23 @@ File: figures/EHESS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/EHESS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/EHESS_LOGO-eps-converted-to.pdf used on input 
-line 50.
+line 51.
 (pdftex.def)             Requested size: 168.49037pt x 167.07262pt.
-LaTeX Font Info:    Calculating math sizes for size <44.79> on input line 50.
+LaTeX Font Info:    Calculating math sizes for size <50.16> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <44.79> on input line 50.
+(Font)              <50.16> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <31.35284> on input line 50.
+(Font)              <35.11185> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <22.39499> on input line 50.
-LaTeX Font Info:    Calculating math sizes for size <37.33> on input line 50.
+(Font)              <25.08> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <41.8> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <37.33> on input line 50.
+(Font)              <41.8> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <26.13087> on input line 50.
+(Font)              <29.25987> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <18.665> on input line 50.
-LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 50.
+(Font)              <20.9> on input line 51.
+LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 51.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmvtt.fd
@@ -1828,7 +1837,7 @@ Package epstopdf Info: Source file: <figures/ENS_LOGO.eps>
 (epstopdf)                    size: 27641 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ENS_LOGO-eps-conve
 rted-to.pdf figures/ENS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 50.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/ENS_LOGO-eps-converted-to.pdf, id=18, 133.49875pt x 150.5625pt>
@@ -1836,7 +1845,7 @@ File: figures/ENS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ENS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ENS_LOGO-eps-converted-to.pdf used on input li
-ne 50.
+ne 51.
 (pdftex.def)             Requested size: 151.6403pt x 171.0388pt.
 Package epstopdf Info: Source file: <figures/ERC_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -1846,7 +1855,7 @@ Package epstopdf Info: Source file: <figures/ERC_LOGO.eps>
 (epstopdf)                    size: 50150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ERC_LOGO-eps-conve
 rted-to.pdf figures/ERC_LOGO.eps>
-(epstopdf)             \includegraphics on input line 50.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/ERC_LOGO-eps-converted-to.pdf, id=19, 144.54pt x 140.525pt>
@@ -1854,7 +1863,7 @@ File: figures/ERC_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ERC_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ERC_LOGO-eps-converted-to.pdf used on input li
-ne 50.
+ne 51.
 (pdftex.def)             Requested size: 185.34042pt x 180.20157pt.
 Package epstopdf Info: Source file: <figures/PSL_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -1864,7 +1873,7 @@ Package epstopdf Info: Source file: <figures/PSL_LOGO.eps>
 (epstopdf)                    size: 21987 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/PSL_LOGO-eps-conve
 rted-to.pdf figures/PSL_LOGO.eps>
-(epstopdf)             \includegraphics on input line 50.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/PSL_LOGO-eps-converted-to.pdf, id=20, 469.755pt x 273.02pt>
@@ -1872,42 +1881,43 @@ File: figures/PSL_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/PSL_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/PSL_LOGO-eps-converted-to.pdf used on input li
-ne 50.
+ne 51.
 (pdftex.def)             Requested size: 185.34042pt x 107.71881pt.
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 307
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 271
 .
 
 (/usr/share/texmf/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <31.1> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 307.
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <34.83> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 271.
 
-Package epstopdf Info: Source file: <figures/system.eps>
-(epstopdf)                    date: 2015-09-01 15:10:17
-(epstopdf)                    size: 83294 bytes
-(epstopdf)             Output file: <figures/system-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-01 15:10:36
-(epstopdf)                    size: 47437 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/system-eps-convert
-ed-to.pdf figures/system.eps>
-(epstopdf)             \includegraphics on input line 307.
+Package epstopdf Info: Source file: <figures/system_overview2.eps>
+(epstopdf)                    date: 2015-09-03 18:13:27
+(epstopdf)                    size: 61955 bytes
+(epstopdf)             Output file: <figures/system_overview2-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2015-09-03 18:13:49
+(epstopdf)                    size: 35280 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/system_overview2-e
+ps-converted-to.pdf figures/system_overview2.eps>
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
-<figures/system-eps-converted-to.pdf, id=23, 689.57625pt x 135.50626pt>
-File: figures/system-eps-converted-to.pdf Graphic file (type pdf)
+<figures/system_overview2-eps-converted-to.pdf, id=23, 313.17pt x 206.7725pt>
+File: figures/system_overview2-eps-converted-to.pdf Graphic file (type pdf)
 
-<use figures/system-eps-converted-to.pdf>
-Package pdftex.def Info: figures/system-eps-converted-to.pdf used on input line
- 307.
-(pdftex.def)             Requested size: 695.54326pt x 136.68033pt.
+<use figures/system_overview2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/system_overview2-eps-converted-to.pdf used on 
+input line 271.
+(pdftex.def)             Requested size: 758.31711pt x 500.75381pt.
 
-<figures/similarity_matrix.png, id=26, 385.44pt x 348.30125pt>
+<figures/similarity_matrix.png, id=24, 385.44pt x 348.30125pt>
 File: figures/similarity_matrix.png Graphic file (type png)
 
 <use figures/similarity_matrix.png>
-Package pdftex.def Info: figures/similarity_matrix.png used on input line 307.
-(pdftex.def)             Requested size: 278.21304pt x 251.40384pt.
+Package pdftex.def Info: figures/similarity_matrix.png used on input line 271.
+(pdftex.def)             Requested size: 300.99751pt x 271.99275pt.
 Package epstopdf Info: Source file: <figures/abnet.eps>
 (epstopdf)                    date: 2015-09-01 14:50:34
 (epstopdf)                    size: 138111 bytes
@@ -1916,53 +1926,43 @@ Package epstopdf Info: Source file: <figures/abnet.eps>
 (epstopdf)                    size: 72925 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/abnet-eps-converte
 d-to.pdf figures/abnet.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/abnet-eps-converted-to.pdf, id=28, 409.53pt x 315.1775pt>
+<figures/abnet-eps-converted-to.pdf, id=29, 409.53pt x 315.1775pt>
 File: figures/abnet-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/abnet-eps-converted-to.pdf>
 Package pdftex.def Info: figures/abnet-eps-converted-to.pdf used on input line 
-307.
-(pdftex.def)             Requested size: 591.216pt x 455.03351pt.
-LaTeX Font Info:    Calculating math sizes for size <31.1> on input line 307.
+271.
+(pdftex.def)             Requested size: 704.14806pt x 541.95526pt.
+LaTeX Font Info:    Calculating math sizes for size <29.04> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <31.1> on input line 307.
+(Font)              <29.04> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <21.7699> on input line 307.
+(Font)              <20.3279> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15.55> on input line 307.
-Package epstopdf Info: Source file: <figures/system_mdelta.eps>
-(epstopdf)                    date: 2015-09-01 15:10:19
-(epstopdf)                    size: 93427 bytes
-(epstopdf)             Output file: <figures/system_mdelta-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-09-01 15:10:36
-(epstopdf)                    size: 52981 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/system_mdelta-eps-
-converted-to.pdf figures/system_mdelta.eps>
-(epstopdf)             \includegraphics on input line 307.
+(Font)              <14.51999> on input line 271.
+Package epstopdf Info: Source file: <figures/results.eps>
+(epstopdf)                    date: 2015-09-03 18:04:53
+(epstopdf)                    size: 72377 bytes
+(epstopdf)             Output file: <figures/results-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-03 18:05:05
+(epstopdf)                    size: 39247 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/results-eps-conver
+ted-to.pdf figures/results.eps>
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/system_mdelta-eps-converted-to.pdf, id=29, 689.57625pt x 135.50626pt>
-File: figures/system_mdelta-eps-converted-to.pdf Graphic file (type pdf)
+<figures/results-eps-converted-to.pdf, id=31, 455.7025pt x 171.64125pt>
+File: figures/results-eps-converted-to.pdf Graphic file (type pdf)
 
-<use figures/system_mdelta-eps-converted-to.pdf>
-Package pdftex.def Info: figures/system_mdelta-eps-converted-to.pdf used on inp
-ut line 307.
-(pdftex.def)             Requested size: 695.54326pt x 136.68033pt.
-LaTeX Font Info:    Calculating math sizes for size <25.93> on input line 307.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <25.93> on input line 307.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <18.15091> on input line 307.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12.965> on input line 307.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <31.1> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 307.
+<use figures/results-eps-converted-to.pdf>
+Package pdftex.def Info: figures/results-eps-converted-to.pdf used on input lin
+e 271.
+(pdftex.def)             Requested size: 866.65521pt x 326.436pt.
  (./main.bbl
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <25.93> not available
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.19> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 26.
 )
 Package epstopdf Info: Source file: <figures/CNRS_LOGO.eps>
@@ -1973,13 +1973,13 @@ Package epstopdf Info: Source file: <figures/CNRS_LOGO.eps>
 (epstopdf)                    size: 17757 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/CNRS_LOGO-eps-conv
 erted-to.pdf figures/CNRS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/CNRS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/CNRS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/CNRS_LOGO-eps-converted-to.pdf used on input l
-ine 307.
+ine 271.
 (pdftex.def)             Requested size: 151.6403pt x 151.64243pt.
 Package epstopdf Info: Source file: <figures/EHESS_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -1989,13 +1989,13 @@ Package epstopdf Info: Source file: <figures/EHESS_LOGO.eps>
 (epstopdf)                    size: 9131 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/EHESS_LOGO-eps-con
 verted-to.pdf figures/EHESS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/EHESS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/EHESS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/EHESS_LOGO-eps-converted-to.pdf used on input 
-line 307.
+line 271.
 (pdftex.def)             Requested size: 168.49037pt x 167.07262pt.
 Package epstopdf Info: Source file: <figures/ENS_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -2005,13 +2005,13 @@ Package epstopdf Info: Source file: <figures/ENS_LOGO.eps>
 (epstopdf)                    size: 27641 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ENS_LOGO-eps-conve
 rted-to.pdf figures/ENS_LOGO.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/ENS_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ENS_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ENS_LOGO-eps-converted-to.pdf used on input li
-ne 307.
+ne 271.
 (pdftex.def)             Requested size: 151.6403pt x 171.0388pt.
 Package epstopdf Info: Source file: <figures/ERC_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -2021,13 +2021,13 @@ Package epstopdf Info: Source file: <figures/ERC_LOGO.eps>
 (epstopdf)                    size: 50150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ERC_LOGO-eps-conve
 rted-to.pdf figures/ERC_LOGO.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/ERC_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ERC_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ERC_LOGO-eps-converted-to.pdf used on input li
-ne 307.
+ne 271.
 (pdftex.def)             Requested size: 185.34042pt x 180.20157pt.
 Package epstopdf Info: Source file: <figures/PSL_LOGO.eps>
 (epstopdf)                    date: 2015-09-01 10:17:51
@@ -2037,13 +2037,13 @@ Package epstopdf Info: Source file: <figures/PSL_LOGO.eps>
 (epstopdf)                    size: 21987 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/PSL_LOGO-eps-conve
 rted-to.pdf figures/PSL_LOGO.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/PSL_LOGO-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/PSL_LOGO-eps-converted-to.pdf>
 Package pdftex.def Info: figures/PSL_LOGO-eps-converted-to.pdf used on input li
-ne 307.
+ne 271.
 (pdftex.def)             Requested size: 185.34042pt x 107.71881pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -2052,24 +2052,24 @@ has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.307 \end{frame}
+l.271 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{fig:system}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.307 \end{frame}
+l.271 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{fig:system}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.307 \end{frame}
+l.271 \end{frame}
                   <./figures/CNRS_LOGO-eps-converted-to.pdf> <./figures/EHESS_L
 OGO-eps-converted-to.pdf> <./figures/ENS_LOGO-eps-converted-to.pdf> <./figures/
 ERC_LOGO-eps-converted-to.pdf> <./figures/PSL_LOGO-eps-converted-to.pdf> <./fig
-ures/system-eps-converted-to.pdf> <./figures/similarity_matrix.png> <./figures/
-abnet-eps-converted-to.pdf> <./figures/system_mdelta-eps-converted-to.pdf>]
+ures/system_overview2-eps-converted-to.pdf> <./figures/similarity_matrix.png> <
+./figures/abnet-eps-converted-to.pdf> <./figures/results-eps-converted-to.pdf>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -2079,26 +2079,25 @@ abnet-eps-converted-to.pdf> <./figures/system_mdelta-eps-converted-to.pdf>]
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
  ) 
 Here is how much of TeX's memory you used:
- 24081 strings out of 493105
- 471411 string characters out of 6137072
- 638220 words of memory out of 5000000
- 26906 multiletter control sequences out of 15000+600000
- 136200 words of font info for 174 fonts, out of 8000000 for 9000
+ 24093 strings out of 493105
+ 471331 string characters out of 6137072
+ 583504 words of memory out of 5000000
+ 26916 multiletter control sequences out of 15000+600000
+ 118857 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,108p,444b,826s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2112,10 +2111,10 @@ type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmvtt10.pfb>
 
-Output written on main.pdf (1 page, 492249 bytes).
+Output written on main.pdf (1 page, 457579 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
