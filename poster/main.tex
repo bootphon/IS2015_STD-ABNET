@@ -123,6 +123,9 @@ See \cite{jansenvandurme2011} for more.
 \item We extract 40 dimensionnal log-energy Mel-scale filterbanks (10ms step and 25ms window size). 7 adjacent (following the ``aligned'' path for pairs of ``same'' words, no alignment for ``different'' words) frames are stacked as input for the \abnet{}.
 \end{itemize}
 
+\vfill
+\columnbreak
+
 \subsection{ABnet}
 
 \begin{itemize}
@@ -167,20 +170,21 @@ where $$\cos(x, y) = \frac{\tup{x, y}}{\norm{x}\norm{y}}$$
   \end{center}
 \end{figure}
 
+\subsection{Description}
 \begin{itemize}
 \item Two close frames (more likely to belong to the same phoneme) should differ less than two distant frames.
-\item the M-delta measure quantify how this property is verified locally.
+\item the M-delta measure\cite{ogawaetal2015} quantify how this property is verified.
 $$M_\Delta = \mu{}_{\mathrm{across}} - \mu{}_{\mathrm{within}}$$
 \item $\mu{}_{\mathrm{across}}$ (resp. $\mu{}_{\mathrm{within}}$) is an estimation of the average M-measure over frames belonging to different (resp. same) phonemes.
-\item The M-measure is the average over all frames of the divergence between 2 frames (here we used the cosine distance as the divergence).
+\item The M-measure is the average over all frames of the symmetric KL-divergence between 2 frames (here we used the cosine distance instead the divergence).
 \end{itemize}
 
-\vspace{1cm}
+\subsection{Experiment}
 \begin{itemize}
-\item M-delta measure calculated for each frames, with a context of 500ms.
+\item M-delta measure estimated locally for each frames, with a context of 500ms.
 \item For each fragment found by the STD system, the average M-delta is calculated. The lower quartile is filtered out.
 \end{itemize}
-The results of the filtering are described in the table below. The NED is the normalized levenstein distance (calculated on the phone transcription). The coverage is a measure of the percentage of the corpus inventory discovered.
+The results of the filtering are described in the next table. The NED is the normalized levenstein distance (calculated on the phone transcription). The coverage is a measure of the percentage of the corpus inventory discovered.
 
 \begin{table}[h]
 \caption{\label{tab:std-stats} Output of the spoken term discovery system. These fragments serve as input to the \abnet{}.}

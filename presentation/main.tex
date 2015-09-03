@@ -14,6 +14,8 @@
 
 \usepackage{epstopdf}
 \graphicspath{{figures/}} % Location of the graphics files
+\newcommand{\abnet}{{\sc ABnet}}
+
 
 % There are many different themes available for Beamer. A comprehensive
 % list with examples is given here:
@@ -49,7 +51,7 @@
 %\usetheme{Warsaw}
 
 \title{
-Hybrid Spoken Term Discovery-ABnet System
+Hybrid Spoken Term Discovery-DNN System
 }
 
 % A subtitle is optional and this may be deleted
@@ -121,15 +123,41 @@ Roland Thiolli\`ere\inst{*}, Ewan Dunbar\inst{*}, Gabriel Synnaeve\inst{*\dagger
 
 \subsection{First Subsection}
 
-\begin{frame}{First Slide Title}{Optional Subtitle}
+\begin{frame}{Finding words to learn phonemes}{System overview and results}
   \begin{itemize}
   \item {
-    My first point.
+    Two randomly selected words are easier to discriminate than two randomly selected phonemes.
   }
   \item {
-    My second point.
+    Two components: spoken term discovery (STD) and siamese deep neural network (DNN).
   }
   \end{itemize}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.5\textwidth}
+        \includegraphics[width=5cm]{system_overview.eps}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    
+{\fontsize{7pt}{10pt}\selectfont  \begin{table}[htb]
+\caption{ Within and across speaker Minimal Pair ABX error rates}
+\label{tab:track1}
+\centerline{
+\begin{tabular}{|lcccc|}
+\hline
+ & \multicolumn{2}{c}{\underline{English}}  & \multicolumn{2}{c|}{\underline{Xitsonga}}    \\
+                        & Within  & Across   & Within  & Across   \\
+\hline
+Baseline          & \emph{15.6}      & \emph{28.1}      & \emph{19.1}      & \emph{33.8}      \\
+Topline           & \emph{12.1}      & \emph{16.0}      & \emph{3.5}       & \emph{4.5}      \\
+\hline
+Our system & \textbf{12.0}      & \textbf{17.9}      & \textbf{11.7}      & \textbf{16.6}      \\
+\hline
+\end{tabular}
+}
+\end{table}}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 % % Placing a * after \section means it will not show in the
